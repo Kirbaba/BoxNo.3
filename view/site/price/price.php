@@ -66,7 +66,7 @@
             <tr>
                 <td>Колодки задние<br>
                     дисковые</td>
-                <td>kolodkiz</td>
+                <td>{kolodkiz}</td>
             </tr>
         </table>
     </div><!--

@@ -138,5 +138,23 @@ add_filter('excerpt_more', 'excerpt_readmore');
 if ( function_exists( 'add_theme_support' ) )
     add_theme_support( 'post-thumbnails' );
 
+function get_product()
+{
+    $parser = new Parser_box();
+    $products = get_posts(array(
+            'numberposts' => 3,
+            'category' => '2',
+            'orderby' => 'post_date',
+            'order' => 'DESC',
+            'post_status' => 'publish'
+        )
+    );
+    foreach($products as $product){
+        $img = get_the_post_thumbnail($product->ID);
+        $permalink = get_permalink( $product->ID );
+        $parser->parse(ADD_BOX_DIR . "/view/product/product.php", array('images'=>$img,'title'=>$product->post_title), true);
+    }
 
+}
 
+add_shortcode('product','get_product');

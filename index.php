@@ -55,7 +55,9 @@
 	</section>
 
 	        <?php do_shortcode('[price]');?>
-
+    <section id = 's25'>
+        <?php do_shortcode('[product]');?>
+    </section>
 	<section id='s4'>
 		 	<center><script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=sdyns3AOOFVDt8T1fkHK9Y7GpPwyZV3T&width=1200&height=450"></script></center>
 		 	<div id='contacts'>
