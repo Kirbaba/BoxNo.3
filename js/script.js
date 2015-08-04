@@ -2,12 +2,10 @@ window.img = img;
 (function() {
     var i = 0;
     var src = [
-        window.img.url + '/img/001.png',
-        window.img.url + '/img/002.png',
-        window.img.url + '/img/003.png',
-        window.img.url + '/img/004.png',
-        window.img.url + '/img/005.png'
-
+        window.img.url + '/img/0002.png',
+        window.img.url + '/img/0003.png',
+        window.img.url + '/img/00001.png',
+        window.img.url + '/img/0051.png'
     ];
     var l = src.length;
     var t;
