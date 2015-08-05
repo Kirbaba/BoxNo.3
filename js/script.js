@@ -4,7 +4,7 @@ window.img = img;
     var src = [
         window.img.url + '/img/0002.png',
         window.img.url + '/img/0003.png',
-        window.img.url + '/img/00001.png',
+        window.img.url + '/img/01.png',
         window.img.url + '/img/0051.png'
     ];
     var l = src.length;

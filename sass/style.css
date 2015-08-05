@@ -1,3 +1,19 @@
-
+#s25 {
+  display: block;
+  width: 1200px;
+  margin: 0 auto;
+  background: #30313e;
+  padding: 50px 0;
+  overflow: hidden; }
+  #s25 button {
+    font-size: 20px;
+    border: 2px solid white;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background: transparent;
+    padding: 7px 7px 7px 7px;
+    margin: 50px auto 25px;
+    color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
