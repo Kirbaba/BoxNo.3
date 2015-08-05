@@ -58,7 +58,8 @@
     <section id = 's25'>
     	<h1 class="productsTitle">Запчасти</h1>
         <?php do_shortcode('[product]');?>
-        <button class="" id="writeus">ЗАКАЗ ЗАПЧАСТИ</button>
+        <button class="" id="zprod">ЗАКАЗ ЗАПЧАСТИ</button>
+
     </section>
 	<section id='s4'>
 		 	<center><script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=sdyns3AOOFVDt8T1fkHK9Y7GpPwyZV3T&width=1200&height=450"></script></center>
@@ -89,7 +90,27 @@
 				<button id="sentReq" type="submit" class='white'>НАПИСАТЬ НАМ</button>
 			</div>
 		</form>
-	</div></div>
+	</div>
+    </div>
+        <div id='bgprod'><div id='prod'>
+                <form method="POST" id="feedback-form" role="form">
+                    <div class="form-group">
+                        <input id="order_name" class="form-control white" type="text" name="nameF" required placeholder="Ваше имя" x-autocompletetype="name">
+                    </div>
+                    <div class="form-group">
+                        <input id="order_mail" class="form-control white" type="email" name="contactF" required placeholder="Ваш E-mail" x-autocompletetype="email">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="order_text" class="form-control white" type="text" name="textF" required placeholder="Какую запчасть вы хотите заказать" x-autocompletetype="text"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button id="order" type="submit" class='white'>ЗАКАЗАТЬ</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
 <!--[if lt IE 9]>
     <script src="js/html5shiv.min.js"></script>
 <![endif]-->

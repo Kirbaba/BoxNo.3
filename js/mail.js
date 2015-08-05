@@ -24,3 +24,4 @@ jQuery(document).on('click', '#sentReq', function (){
         text = jQuery("#inputtext").val('');
     }
 });
+

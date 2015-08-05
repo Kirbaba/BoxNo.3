@@ -20,6 +20,7 @@ function add_script(){
     wp_enqueue_script( 'form', get_template_directory_uri() . '/js/form.js', array(), '1', true);
     wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array(), '1', true);
     wp_enqueue_script( 'mail', get_template_directory_uri() . '/js/mail.js', array(), '1');
+    wp_enqueue_script( 'order_mail', get_template_directory_uri() . '/js/order_mail.js', array(), '1');
 
 
 
@@ -39,8 +40,13 @@ function add_script(){
 add_action('wp_ajax_get_mail', 'get_mail_function');
 add_action('wp_ajax_nopriv_get_mail', 'get_mail_function');
 
+add_action('wp_ajax_get_order', 'get_order_function');
+add_action('wp_ajax_nopriv_get_order', 'get_order_function');
+
 add_action( 'wp_enqueue_scripts', 'add_style' );
 add_action( 'wp_enqueue_scripts', 'add_script' );
+
+
 
 
 function price_menu_page()
@@ -103,6 +109,17 @@ function get_mail_function(){
     mail('korol_dima@list.ru', 'Сообщение с вашего сайта', $massage, "Content-type: text/html; charset=UTF-8\r\n");
 }
 
+function get_order_function(){
+    $name = $_POST['name'];
+    $from_mail = $_POST['mail'];
+    $text = $_POST['text'];
+
+    $massage = "Имя: $name <br /> e-mail: $from_mail <br /> $text";
+
+    mail('korol_dima@list.ru', 'Заказ с вашего сайта', $massage, "Content-type: text/html; charset=UTF-8\r\n");
+}
+
+
 function prn($content) {
     echo '<pre style="background: lightgray; border: 1px solid black; padding: 2px">';
     print_r ( $content );
@@ -143,7 +160,7 @@ function get_product()
     $parser = new Parser_box();
     $products = get_posts(array(
             'numberposts' => 3,
-            'category' => '2',
+            'category' => '14',
             'orderby' => 'post_date',
             'order' => 'DESC',
             'post_status' => 'publish'
